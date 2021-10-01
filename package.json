@@ -1,7 +1,7 @@
 {
   "name": "psdocs-vscode",
   "displayName": "PSDocs.Azure (Preview)",
-  "publisher": "viperdan",
+  "publisher": "vicperdana",
   "description": "Generate Markdown from ARM templates using PSDocs.Azure",
   "author": {
     "name": "Vic Perdana"
@@ -55,14 +55,17 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run -S esbuild-base -- --minify",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "pack": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/dist/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run -S esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch"
   },
   "extensionDependencies": [
     "vscode.powershell",

@@ -27,6 +27,13 @@
     "theme": "dark"
   },
   "icon": "images/psdocs-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/PSDocs-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Microsoft/PSDocs-vscode/issues"
+  },
   "activationEvents": [
     "onCommand:viperdan.psdocs-vscode"
   ],
@@ -71,6 +78,7 @@
     "glob": "^7.1.7",
     "mocha": "^8.4.0",
     "typescript": "^4.3.2",
+    "vsce": "^1.95.0",
     "vscode-test": "^1.5.2"
   }
 }

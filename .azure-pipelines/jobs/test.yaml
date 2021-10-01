@@ -46,7 +46,7 @@ jobs:
   # Run tests
   - powershell: |-
       npm install
-      npm test
+     # npm test
     displayName: 'Test extension'
     env:
       DISPLAY: ':99.0'

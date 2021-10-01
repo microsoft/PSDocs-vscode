@@ -1,33 +1,94 @@
-# Project
+# PSDocs.Azure
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+Generate documentation from Infrastructure as Code (IaC).  PSDocs for Azure automatically generates documentation for Azure infrastructure as code (IaC) artifacts.
 
-As the maintainer of this project, please make a few updates:
+Please review the [Requirements](#Requirements) to ensure you can use this extension successfully.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+Note: this extension is in preview release. 
+
+## Features
+
+### Command Palette
+You can generate markdown files directly from an ARM template through the Command Pallette.  Simply press `Ctrl+Shift+P` and type in `PSDocs.Azure: Generate Markdown`
+
+![Generate Markdown](images/cmd-a.png)
+
+You will first be asked to provide a full path to the ARM template.  The prompt auto-populates with the full path of the currently opened file.
+
+![Provide full path to the ARM template file](images/cmd-b.png)
+
+Additionally, you will be asked to provide a relative path (from the ARM template) to store the generated markdown.
+
+![Provide destination relative path where markdown will be created](images/cmd-c.png)
+
+The markdown will be created in the folder relative to the the ARM template file.
+
+### Snippets
+
+Adds snippets for adding metadata tag within ARM templates. 
+* `psdocs-arm` can be used to add metadata at the template root schema
+* `psdocs-arm-short` can be used to add metadata anywhere else e.g. parameters or variables
+
+![PSDocs.Azure Template](images/snippet-arm.gif)
+
+![PSDocs.Azure Template](images/snippet-arm-short.gif)
+
+
+## Requirements
+
+PSDocs.Azure is required for this extension to work. 
+
+To install the module use the following command from a PowerShell prompt.
+
+```powershell
+Install-Module -Name PSDocs.Azure -Scope CurrentUser;
+```
+
+## Known Issues and Limitations
+
+* The extension is in preview and therefore has not undergone extended testing scenarios. 
+* Only one markdown can be generated at one time. 
+* A separate directory should be used to avoid overriding the Generated Markdown --> README.md file. 
+* Additional PSDocs.Azure [configuration](https://github.com/Azure/PSDocs.Azure/blob/main/docs/concepts/en-US/about_PSDocs_Azure_Configuration.md) is not supported at this time. 
+
+## Release Notes
+
+Refer to [CHANGELOG](CHANGELOG.md)
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+This project welcomes contributions and suggestions.
+If you are ready to contribute, please visit the [contribution guide].
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
+or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Trademarks
+## Maintainers
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+- [Vic Perdana](https://github.com/VicPerdana)
+- [Bernie White](https://github.com/BernieWhite)
+
+## License
+
+This project is [licensed under the MIT License][license].
+
+[issue]: https://github.com/Microsoft/PSDocs-vscode/issues
+[discussion]: https://github.com/microsoft/PSDocs-vscode/discussions
+[ci-badge]: https://dev.azure.com/viperdan/PSDocs-vscode/_apis/build/status/PSDocs-vscode-CI?branchName=main
+[vscode-ext-gallery]: https://code.visualstudio.com/docs/editor/extension-gallery
+[ext-preview]: https://marketplace.visualstudio.com/items?itemName=viperdan.PSDocs-vscode-preview
+[ext-preview-version-badge]: https://vsmarketplacebadge.apphb.com/version/viperdan.PSDocs-vscode-preview.svg
+[ext-preview-installs-badge]: https://vsmarketplacebadge.apphb.com/installs-short/viperdan.PSDocs-vscode-preview.svg
+[ext-stable]: https://marketplace.visualstudio.com/items?itemName=viperdan.PSDocs-vscode
+[ext-stable-version-badge]: https://vsmarketplacebadge.apphb.com/version/viperdan.PSDocs-vscode.svg
+[ext-stable-installs-badge]: https://vsmarketplacebadge.apphb.com/installs-short/viperdan.PSDocs-vscode.svg
+[module-version-badge]: https://img.shields.io/powershellgallery/v/PSDocs.svg?label=PowerShell%20Gallery&color=brightgreen
+[contribution guide]: https://github.com/Microsoft/PSDocs-vscode/blob/main/CONTRIBUTING.md
+[change log]: https://github.com/Microsoft/PSDocs-vscode/blob/main/CHANGELOG.md
+[license]: https://github.com/Microsoft/PSDocs-vscode/blob/main/LICENSE
+[ps-rule.yaml]: https://microsoft.github.io/PSDocs/concepts/PSDocs/en-US/about_PSDocs_Options.html
+
+

@@ -1,6 +1,6 @@
 {
   "name": "psdocs-vscode",
-  "displayName": "PSDocs (Preview)",
+  "displayName": "PSDocs.Azure (Preview)",
   "publisher": "viperdan",
   "description": "Generate Markdown from ARM templates using PSDocs.Azure",
   "author": {

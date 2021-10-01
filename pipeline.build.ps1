@@ -50,11 +50,11 @@ if ([String]::IsNullOrEmpty('Channel')) {
     $Channel = 'preview';
 }
 $channelSuffix = '-preview';
-$channelDisplayName = 'PSDocs (Preview)';
+$channelDisplayName = 'PSDocs.Azure (Preview)';
 switch ($Channel) {
-    'dev' { $channelSuffix = '-dev'; $channelDisplayName = 'PSDocs (Dev)'; }
-    'stable' { $channelSuffix = ''; $channelDisplayName = 'PSDocs'; }
-    default { $channelSuffix = '-preview'; $channelDisplayName = 'PSDocs (Preview)'; }
+    'dev' { $channelSuffix = '-dev'; $channelDisplayName = 'PSDocs.Azure (Dev)'; }
+    'stable' { $channelSuffix = ''; $channelDisplayName = 'PSDocs.Azure'; }
+    default { $channelSuffix = '-preview'; $channelDisplayName = 'PSDocs.Azure (Preview)'; }
 }
 
 Write-Host -Object "[Pipeline] -- Using channel: $Channel" -ForegroundColor Green;
@@ -168,22 +168,10 @@ task NuGet {
 
 # Synopsis: Install PSDocs
 task PSDocs NuGet, {
-    if ($Null -eq (Get-InstalledModule -Name PSDocs -MinimumVersion 1.3.0 -ErrorAction Ignore)) {
-        Install-Module -Name PSDocs -Repository PSGallery -MinimumVersion 1.3.0 -Scope CurrentUser -Force;
+    if ($Null -eq (Get-InstalledModule -Name PSDocs.Azure -MinimumVersion 0.3.0 -ErrorAction Ignore)) {
+        Install-Module -Name PSDocs.Azure -Repository PSGallery -MinimumVersion 0.3.0 -Scope CurrentUser -Force;
     }
     Import-Module -Name PSDocs -Verbose:$False;
-}
-
-# Synopsis: Run validation
-task Rules PSDocs, {
-    $assertParams = @{
-        Path = './.ps-rule/'
-        Style = $AssertStyle
-        OutputFormat = 'NUnit3'
-        ErrorAction = 'Stop'
-        As = 'Summary'
-    }
-    Assert-PSDocs @assertParams -InputPath $PWD -Format File -OutputPath reports/ps-rule-file.xml;
 }
 
 # Synopsis: Remove temp files

@@ -63,7 +63,7 @@
     "test": "node ./out/test/runTest.js",
     "pack": "vsce package",
     "publish": "vsce publish",
-    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/dist/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
     "esbuild": "npm run -S esbuild-base -- --sourcemap",
     "esbuild-watch": "npm run -S esbuild-base -- --sourcemap --watch"
   },

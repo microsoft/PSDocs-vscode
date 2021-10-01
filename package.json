@@ -35,7 +35,7 @@
     "url": "https://github.com/Microsoft/PSDocs-vscode/issues"
   },
   "activationEvents": [
-    "onCommand:vicperdana.psdocs-vscode"
+    "onCommand:vicperdana.psdocs-vscode-preview"
   ],
   "private": true,
   "preview": true,
@@ -43,7 +43,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "vicperdana.psdocs-vscode",
+        "command": "vicperdana.psdocs-vscode-preview",
         "title": "PSDocs.Azure: Generate Markdown"
       }
     ],

@@ -5,7 +5,7 @@ import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
-    "vicperdana.psdocs-vscode",
+    "vicperdana.psdocs-vscode-preview",
     function () {
       var currentlyOpenFilePath =
         vscode.window.activeTextEditor?.document.uri.fsPath;

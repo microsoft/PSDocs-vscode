@@ -4,12 +4,12 @@ Generate documentation from Infrastructure as Code (IaC).  PSDocs for Azure auto
 
 Please review the [Requirements](#Requirements) to ensure you can use this extension successfully.
 
-Note: this extension is in preview release. 
+Note: this extension is in preview. 
 
 ## Features
 
 ### Command Palette
-You can generate markdown files directly from an ARM template through the Command Pallette.  Simply press `Ctrl+Shift+P` and type in `PSDocs.Azure: Generate Markdown`
+You can generate markdown files directly from an ARM template through the Command Pallette.  Simply press `Ctrl+Shift+P` (Win/Linux) or `Command+Shift+P` (MacOS) and type in `PSDocs.Azure: Generate Markdown`
 
 ![Generate Markdown](images/cmd-a.png)
 

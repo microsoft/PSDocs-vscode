@@ -15,6 +15,9 @@ trigger:
     include:
     - 'main'
     - 'release/*'
+  paths:
+    exclude: 
+    - ./*.md
   tags:
     include:
     - 'v1.*'

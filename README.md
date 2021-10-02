@@ -2,7 +2,7 @@
 
 Generate documentation from Infrastructure as Code (IaC).  PSDocs for Azure automatically generates documentation for Azure infrastructure as code (IaC) artifacts.
 
-Please review the [Requirements](#Requirements) to ensure you can use this extension successfully.
+Please review the [Requirements](#requirements) to ensure you can use this extension successfully.
 
 Note: this extension is in preview. 
 

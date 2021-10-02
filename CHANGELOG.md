@@ -8,8 +8,8 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
-## v0.0.1
+## v0.1.0
 
 - Initial preview release.
 
-https://marketplace.visualstudio.com/items?itemName=viperdan.psdocs-vscode
+https://marketplace.visualstudio.com/items?itemName=vicperdana.psdocs-vscode-preview

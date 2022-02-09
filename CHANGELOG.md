@@ -10,6 +10,7 @@ Continue reading to see the changes included in the latest version.
 
 ## v0.2.0
 - Added dependabot alerts
+- Added build status in Docs
 
 ## v0.1.0
 

@@ -8,6 +8,9 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
+## v0.2.0
+- Added dependabot alerts
+
 ## v0.1.0
 
 - Initial preview release.

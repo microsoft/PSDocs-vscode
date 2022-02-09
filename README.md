@@ -1,5 +1,7 @@
 # PSDocs.Azure
 
+[![Build Status](https://dev.azure.com/viperdan/PSDocs-vscode/_apis/build/status/PSDocs-vscode-ci?branchName=main)](https://dev.azure.com/viperdan/PSDocs-vscode/_build/latest?definitionId=50&branchName=main)
+
 Generate documentation from Infrastructure as Code (IaC).  PSDocs for Azure automatically generates documentation for Azure infrastructure as code (IaC) artifacts.
 
 Please review the [Requirements](#requirements) to ensure you can use this extension successfully.

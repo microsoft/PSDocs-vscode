@@ -59,9 +59,10 @@ stages:
   - template: jobs/test.yaml
     parameters:
       name: windows
-      displayName: 'PowerShell 5.1 - win2016'
-      imageName: 'vs2017-win2016'
+      displayName: 'PowerShell 5.1 - Windows 2019'
+      imageName: 'windows-2019'
       channel: preview
+      pwsh: false
 
   - template: jobs/test.yaml
     parameters:
@@ -86,7 +87,8 @@ stages:
     skipComponentGovernanceDetection: true
   jobs:
   - job: Secret_Scan
-    pool: 'Hosted VS2017'
+    pool:
+      vmImage: 'windows-2019'
     displayName: Secret scan
     steps:
     - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2

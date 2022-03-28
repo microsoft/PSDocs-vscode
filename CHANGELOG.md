@@ -8,7 +8,13 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
+- Engineering:
+  - Bumped vscode to 1.65.0.
+  - Updated development dependencies to latest versions.
+  - Updated CI pipeline to use PowerShell 5.1 on Windows 2019.
+
 ## v0.2.0
+
 - Added dependabot alerts
 - Added build status in Docs
 

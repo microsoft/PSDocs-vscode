@@ -13,6 +13,13 @@ Continue reading to see the changes included in the latest version.
   - Updated development dependencies to latest versions.
   - Updated CI pipeline to use PowerShell 5.1 on Windows 2019.
 
+- May 2022 Engineering
+  - eslint-plugin 5.22.0
+  - parser 5.22.0
+  - eslint 8.14.0
+  - esbuild 0.14.38
+  - vscode 1.66.0
+
 ## v0.2.0
 
 - Added dependabot alerts

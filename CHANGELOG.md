@@ -8,6 +8,13 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
+- June 2022 Engineering:
+  - esbuild 0.14.47
+  - eslint-plugin 5.29.0
+  - parser 5.29.0
+  - eslint 8.18.0
+  - node 18.0.0
+
 - Engineering:
   - Bumped vscode to 1.65.0.
   - Updated development dependencies to latest versions.

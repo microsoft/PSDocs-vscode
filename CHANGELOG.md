@@ -8,6 +8,15 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
+## v0.3.0
+
+- Jan 2023 Engineering:
+  - types/vscode 1.74.0
+  - typescript 4.9.4
+  - vsce 2.15.0
+  - parser 5.48.1
+  - eslint-plugin 5.48.1
+
 - June 2022 Engineering:
   - esbuild 0.14.47
   - eslint-plugin 5.29.0

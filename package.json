@@ -78,7 +78,7 @@
     "@types/mocha": "^9.1.1",
     "@types/node": "^20.2.5",
     "eslint": "^8.41.0",
-    "esbuild": "^0.17.19",
+    "esbuild": "^0.18.10",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "glob": "^8.1.0",

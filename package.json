@@ -79,7 +79,7 @@
     "@types/node": "^20.2.5",
     "eslint": "^8.41.0",
     "esbuild": "^0.17.19",
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^5.48.1",
     "glob": "^8.1.0",
     "mocha": "^10.0.0",

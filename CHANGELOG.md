@@ -8,6 +8,20 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
+Jan 2024 Engineering updates
+- "@types/vscode": "^1.85.0"
+- "@types/glob": "^8.1.0"
+- "@types/mocha": "^10.0.6"
+- "@types/node": "^20.11.3"
+- "eslint": "^8.56.0"
+- "esbuild": "^0.19.11"
+- "@typescript-eslint/eslint-plugin": "^6.19.0"
+- "@typescript-eslint/parser": "^6.19.0"
+- "glob": "^10.3.10"
+- "mocha": "^10.2.0"
+- "typescript": "^5.3.3"
+
+
 ## v0.3.0
 
 - Jan 2023 Engineering:

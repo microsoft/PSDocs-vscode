@@ -73,7 +73,7 @@ stages:
 
   - template: jobs/test.yaml
     parameters:
-      name: ubuntu_22-04
+      name: ubuntu_22_04
       displayName: 'PowerShell 7.1 - ubuntu-22.04'
       imageName: 'ubuntu-22.04'
       channel: preview

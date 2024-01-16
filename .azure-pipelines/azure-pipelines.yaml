@@ -51,9 +51,9 @@ stages:
 
   - template: jobs/test.yaml
     parameters:
-      name: macOS_11
-      displayName: 'PowerShell 7.1 - macOS-11'
-      imageName: 'macOS-11'
+      name: macOS_12
+      displayName: 'PowerShell 7.1 - macOS-12'
+      imageName: 'macOS-12'
       channel: preview
 
   - template: jobs/test.yaml
@@ -73,9 +73,9 @@ stages:
 
   - template: jobs/test.yaml
     parameters:
-      name: ubuntu_20_04
-      displayName: 'PowerShell 7.1 - ubuntu-20.04'
-      imageName: 'ubuntu-20.04'
+      name: ubuntu_22.04
+      displayName: 'PowerShell 7.1 - ubuntu-22.04'
+      imageName: 'ubuntu-22.04'
       channel: preview
 
 # Analysis pipeline

@@ -51,31 +51,31 @@ stages:
 
   - template: jobs/test.yaml
     parameters:
-      name: macOS_10_15
-      displayName: 'PowerShell 7.1 - macOS-10.15'
-      imageName: 'macOS-10.15'
+      name: macOS_12
+      displayName: 'PowerShell 7.1 - macOS-12'
+      imageName: 'macOS-12'
       channel: preview
 
   - template: jobs/test.yaml
     parameters:
       name: windows
-      displayName: 'PowerShell 5.1 - Windows 2019'
-      imageName: 'windows-2019'
+      displayName: 'PowerShell 5.1 - Windows 2022'
+      imageName: 'windows-2022'
       channel: preview
       pwsh: false
 
   - template: jobs/test.yaml
     parameters:
-      name: windows_2019
-      displayName: 'PowerShell 7.1 - Windows 2019'
-      imageName: 'windows-2019'
+      name: windows_2022
+      displayName: 'PowerShell 7.1 - Windows 2022'
+      imageName: 'windows-2022'
       channel: preview
 
   - template: jobs/test.yaml
     parameters:
-      name: ubuntu_20_04
-      displayName: 'PowerShell 7.1 - ubuntu-20.04'
-      imageName: 'ubuntu-20.04'
+      name: ubuntu_22_04
+      displayName: 'PowerShell 7.1 - ubuntu-22.04'
+      imageName: 'ubuntu-22.04'
       channel: preview
 
 # Analysis pipeline
@@ -88,24 +88,24 @@ stages:
   jobs:
   - job: Secret_Scan
     pool:
-      vmImage: 'windows-2019'
-    displayName: Secret scan
+        vmImage: 'windows-2022'
+        displayName: Secret scan
     steps:
-    - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
-      displayName: 'Scan for secrets'
-      inputs:
-        debugMode: false
-        toolMajorVersion: V2
+      - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
+        displayName: 'Scan for secrets'
+        inputs:
+          debugMode: false
+          toolMajorVersion: V3
 
-    - task: securedevelopmentteam.vss-secure-development-tools.build-task-publishsecurityanalysislogs.PublishSecurityAnalysisLogs@2
-      displayName: 'Publish scan logs'
-      continueOnError: true
+      - task: securedevelopmentteam.vss-secure-development-tools.build-task-publishsecurityanalysislogs.PublishSecurityAnalysisLogs@2
+        displayName: 'Publish scan logs'
+        continueOnError: true
 
-    - task: securedevelopmentteam.vss-secure-development-tools.build-task-postanalysis.PostAnalysis@1
-      displayName: 'Check for failures'
-      inputs:
-        CredScan: true
-        ToolLogsNotFoundAction: Error
+      - task: securedevelopmentteam.vss-secure-development-tools.build-task-postanalysis.PostAnalysis@1
+        displayName: 'Check for failures'
+        inputs:
+          CredScan: true
+          ToolLogsNotFoundAction: Error
 
 # Release pipeline
 - stage: Preview

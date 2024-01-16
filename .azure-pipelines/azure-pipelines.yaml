@@ -51,24 +51,24 @@ stages:
 
   - template: jobs/test.yaml
     parameters:
-      name: macOS_10_15
-      displayName: 'PowerShell 7.1 - macOS-10.15'
-      imageName: 'macOS-10.15'
+      name: macOS_11
+      displayName: 'PowerShell 7.1 - macOS-11'
+      imageName: 'macOS-11'
       channel: preview
 
   - template: jobs/test.yaml
     parameters:
       name: windows
-      displayName: 'PowerShell 5.1 - Windows 2019'
-      imageName: 'windows-2019'
+      displayName: 'PowerShell 5.1 - Windows 2022'
+      imageName: 'windows-2022'
       channel: preview
       pwsh: false
 
   - template: jobs/test.yaml
     parameters:
-      name: windows_2019
-      displayName: 'PowerShell 7.1 - Windows 2019'
-      imageName: 'windows-2019'
+      name: windows_2022
+      displayName: 'PowerShell 7.1 - Windows 2022'
+      imageName: 'windows-2022'
       channel: preview
 
   - template: jobs/test.yaml
@@ -88,7 +88,7 @@ stages:
   jobs:
   - job: Secret_Scan
     pool:
-      vmImage: 'windows-2019'
+      vmImage: 'windows-2022'
     displayName: Secret scan
     steps:
     - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2

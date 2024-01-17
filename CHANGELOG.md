@@ -8,6 +8,7 @@ Continue reading to see the changes included in the latest version.
 
 ## Unreleased
 
+## v0.3.1
 Jan 2024 Engineering updates
 - "@types/vscode": "^1.85.0"
 - "@types/glob": "^8.1.0"

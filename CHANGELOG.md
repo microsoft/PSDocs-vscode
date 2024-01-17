@@ -7,6 +7,9 @@ This extension is available in two release channels for Visual Studio Code from 
 Continue reading to see the changes included in the latest version.
 
 ## Unreleased
+
+
+## v0.3.2
 17 Jan 2024 Engineering updates
 "@types/node": "^20.11.5"
 "@types/vscode": "^1.85.0"

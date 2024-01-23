@@ -7,7 +7,7 @@ This extension is available in two release channels for Visual Studio Code from 
 Continue reading to see the changes included in the latest version.
 
 ## Unreleased
-
+Updated Pipeline step to remove GitHub release.
 
 ## v0.3.2
 17 Jan 2024 Engineering updates

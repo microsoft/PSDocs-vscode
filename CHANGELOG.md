@@ -11,7 +11,7 @@ Updated Pipeline step to remove GitHub release.
 
 ## v0.3.3 (27 May 2024)
 - "@types/node": "^20.11.5"
-- "@types/vscode": "^1.85.0"
+- "@types/vscode": "^1.89.0"
 - "esbuild": "^0.19.11"
 - "eslint": "^8.56.0"
 - "@vscode/vsce": "^2.22.0"

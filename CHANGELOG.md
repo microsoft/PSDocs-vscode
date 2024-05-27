@@ -9,13 +9,23 @@ Continue reading to see the changes included in the latest version.
 ## Unreleased
 Updated Pipeline step to remove GitHub release.
 
-## v0.3.2
-17 Jan 2024 Engineering updates
-"@types/node": "^20.11.5"
-"@types/vscode": "^1.85.0"
-"esbuild": "^0.19.11"
-"eslint": "^8.56.0"
-"@vscode/vsce": "^2.22.0"
+## v0.3.3 (27 May 2024)
+- "@types/node": "^20.11.5"
+- "@types/vscode": "^1.89.0"
+- "esbuild": "^0.19.11"
+- "eslint": "^8.56.0"
+- "@vscode/vsce": "^2.22.0"
+- "glob": "^10.3.10"
+- "mocha": "^10.2.0"
+- "typescript": "^5.3.3"
+
+## v0.3.2 (17 Jan 2024)
+Engineering updates
+- "@types/node": "^20.11.5"
+- "@types/vscode": "^1.85.0"
+- "esbuild": "^0.19.11"
+- "eslint": "^8.56.0"
+- "@vscode/vsce": "^2.22.0"
 
 ## v0.3.1
 Jan 2024 Engineering updates

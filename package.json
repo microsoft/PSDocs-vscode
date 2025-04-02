@@ -82,7 +82,7 @@
     "esbuild": "^0.21.4",
     "eslint": "^8.56.0",
     "glob": "^10.4.1",
-    "mocha": "^10.4.0",
+    "mocha": "^10.8.2",
     "typescript": "^5.4.5",
     "vscode-test": "^1.6.1"
   },

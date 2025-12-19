@@ -81,7 +81,7 @@
     "@typescript-eslint/parser": "^8.45.0",
     "esbuild": "^0.25.10",
     "eslint": "^9.28.0",
-    "glob": "^11.1.0",
+    "glob": "^12.0.0",
     "mocha": "^11.1.0",
     "typescript": "^5.4.5",
     "vscode-test": "^1.6.1"

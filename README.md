@@ -1,5 +1,16 @@
 # PSDocs.Azure
 
+> [!IMPORTANT]
+> **This repository is archived and is no longer actively maintained.**
+>
+> All future work on PSDocs for Azure is consolidated under **[Azure/PSDocs.Azure](https://github.com/Azure/PSDocs.Azure)**.
+>
+> - Please open new issues, discussions, and pull requests in [Azure/PSDocs.Azure](https://github.com/Azure/PSDocs.Azure).
+> - Issues, discussions, and pull requests in this repository will no longer be monitored.
+> - Existing published versions of the extension remain available on the Visual Studio Marketplace, but no new releases will be made from this repository.
+>
+> This repository remains available in read-only form for historical reference.
+
 [![Build Status](https://dev.azure.com/viperdan/PSDocs-vscode/_apis/build/status/PSDocs-vscode-ci?branchName=main)](https://dev.azure.com/viperdan/PSDocs-vscode/_build/latest?definitionId=50&branchName=main)
 ![VSCode Extension](https://img.shields.io/visual-studio-marketplace/d/vicperdana.PSDocs-vscode-preview?color=blue&label=VSCode%20Downloads)
 
@@ -60,8 +71,8 @@ Refer to [CHANGELOG](CHANGELOG.md)
 
 ## Contributing
 
-This project welcomes contributions and suggestions.
-If you are ready to contribute, please visit the [contribution guide].
+This repository is archived and is no longer accepting contributions.
+Please contribute to [Azure/PSDocs.Azure](https://github.com/Azure/PSDocs.Azure) instead.
 
 ## Code of Conduct
 

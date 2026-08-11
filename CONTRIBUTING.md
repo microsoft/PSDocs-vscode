@@ -1,5 +1,10 @@
 # Contributing to PSDocs.Azure VSCode Extension
 
+> [!IMPORTANT]
+> **This repository is archived and is no longer accepting contributions.**
+> All future work on PSDocs for Azure is consolidated under **[Azure/PSDocs.Azure](https://github.com/Azure/PSDocs.Azure)**.
+> Please contribute there instead.
+
 Welcome, and thank you for your interest in contributing to PSDocs!
 
 There are many ways in which you can contribute, beyond writing code.

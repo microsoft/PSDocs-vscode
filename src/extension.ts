@@ -3,6 +3,7 @@
 import { execFile } from "child_process";
 import path = require("path");
 import * as vscode from "vscode";
+import { resolveOutputDirectoryPath } from "./outputPath";
 import { createPSDocsInvocation } from "./psdocsInvocation";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -33,10 +34,17 @@ export function activate(context: vscode.ExtensionContext) {
           if (!value) return;
           outputPath = value;
 
-          const outputDirectoryPath = path.join(
+          const outputDirectoryPath = resolveOutputDirectoryPath(
             templateFolderPath,
             outputPath
           );
+          if (!outputDirectoryPath) {
+            vscode.window.showErrorMessage(
+              "Output path must be relative to and remain within the ARM template folder."
+            );
+            return;
+          }
+
           const invocation = createPSDocsInvocation(
             templatePath,
             outputDirectoryPath

@@ -1,7 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+import { execFile } from "child_process";
 import path = require("path");
 import * as vscode from "vscode";
+import { createPSDocsInvocation } from "./psdocsInvocation";
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
@@ -31,18 +33,26 @@ export function activate(context: vscode.ExtensionContext) {
           if (!value) return;
           outputPath = value;
 
-          const { exec } = require("child_process");
-          var message = "";
-          exec(
-            `Import-Module PSDocs.Azure; Invoke-PSDocument -Module PSDocs.Azure -InputObject ${templatePath} -OutputPath ${templateFolderPath}/${outputPath};`,
-            { shell: "pwsh" },
-            (error: any, stdout: any, stderr: any) => {
-              message = stderr;
+          const outputDirectoryPath = path.join(
+            templateFolderPath,
+            outputPath
+          );
+          const invocation = createPSDocsInvocation(
+            templatePath,
+            outputDirectoryPath
+          );
+
+          execFile(
+            invocation.file,
+            invocation.args,
+            invocation.options,
+            (error, _stdout, stderr) => {
+              const message = stderr || error?.message || "";
               if (message !== "") {
                 vscode.window.showErrorMessage(message);
               } else {
                 vscode.window.showInformationMessage(
-                  `Markdown generated in ${templateFolderPath}/${outputPath}`
+                  `Markdown generated in ${outputDirectoryPath}`
                 );
               }
             }

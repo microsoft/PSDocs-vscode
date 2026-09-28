@@ -7,7 +7,8 @@ This extension is available in two release channels for Visual Studio Code from 
 Continue reading to see the changes included in the latest version.
 
 ## Unreleased
-Updated Pipeline step to remove GitHub release.
+- Fixed PowerShell command injection in the PSDocs preview command.
+- Updated Pipeline step to remove GitHub release.
 
 ## v0.3.3 (27 May 2024)
 - "@types/node": "^20.11.5"
